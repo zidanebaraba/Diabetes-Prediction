@@ -4,6 +4,11 @@ import pandas as pd
 from sklearn.preprocessing import RobustScaler
 sc = RobustScaler()
 
+data = pd.read_csv('./dataset/Diabetes_Prediction.csv')
+
+X = data.iloc[:, :-1].values
+sc.fit(X)
+
 app = Flask(__name__)
 
 @app.route('/')
