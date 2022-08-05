@@ -33,7 +33,7 @@ def pred():
         print(df)
         cc = sc.transform(df)
         print(cc)
-        with open('randomforest_old_method.pkl','rb') as file:
+        with open('./model/randomforest_old_method.pkl','rb') as file:
             rf = pickle.load(file)
 
         prediction = rf.predict(cc)
