@@ -24,7 +24,7 @@ def pred():
         DiabetesPedigreeFunction = request.form["DiabetesPedigreeFunction"]
         Age = request.form["Age"]
     
-        df = df.append({'Pregnancies': Pregnancies, 'Glucose': Glucose, 'BloodPressure': BloodPressure, 'SkinThickness': SkinThickness,'Insulin': Insulin, 'BMI': BMI, 'DiabetesPedigreeFunction': DiabetesPedigreeFunction, 'Age': Age,}, ignore_index=True)
+        df = df.append({'Pregnancies': Pregnancies, 'Glucose': Glucose, 'BloodPressure': BloodPressure, 'SkinThickness': SkinThickness,'Insulin': Insulin, 'BMI': BMI, 'DiabetesPedigreeFunction': DiabetesPedigreeFunction, 'Age': Age}, ignore_index=True)
         
         cc = sc.transform(df)
   
