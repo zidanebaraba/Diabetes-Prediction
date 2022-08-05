@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Medical Cost Regression</title>
+        <title>Diabetes Prediction</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Medical Cost Regression</a>
+                <a class="navbar-brand" href="#page-top">Diabetes Prediction</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -37,9 +37,9 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="../static/assets/img/hospital.png" alt="..." />
+                {% comment %} <img class="masthead-avatar mb-5" src="../static/assets/img/hospital.png" alt="..." /> {% endcomment %}
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Medical Cost Regression</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Diabetes Prediction</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -47,7 +47,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Get prediction of what will you pay for your trip to the hospital!</p>
+                <p class="masthead-subheading font-weight-light mb-0">Predict your diabetes</p>
             </div>
         </header>
         <!-- About Section-->
@@ -62,10 +62,10 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div class="row">
+                {% comment %} <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">Our ML Model is designed to calculate the prediction of medical cost that you will pay for your trip to the hospital</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">So you just have to worry about getting medical care you needed!</p></div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </section>
         <!-- Contact Section-->
@@ -88,49 +88,49 @@
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="Pregnancies" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">Total Pregnancies</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="Glucose" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">Glucose</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="BloodPressure" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">BloodPressure</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="SkinThickness" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">SkinThickness</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="Insulin" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">Insulin</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="BMI" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
+                                <input class="form-control" name="BMI" id="name" type="number" step="any" min="0" max="1" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">BMI</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="DiabetesPedigreeFunction" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">DiabetesPedigreeFunction</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
 
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="Age" id="name" type="number" placeholder="Enter your age..." data-sb-validations="required" />
                                 <label for="name">Age</label>
-                                <div class="invalid-feedback" data-sb-feedback="age:required">Age is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="age:required">This is required.</div>
                             </div>
                             <br>
                             <br>
