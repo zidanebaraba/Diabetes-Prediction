@@ -24,13 +24,15 @@ def pred():
         DiabetesPedigreeFunction = request.form["DiabetesPedigreeFunction"]
         Age = request.form["Age"]
     
-    
+        df = df.append({'Pregnancies': Pregnancies, 'Glucose': Glucose, 'BloodPressure': BloodPressure, 'SkinThickness': SkinThickness,'Insulin': Insulin, 'BMI': BMI, 'DiabetesPedigreeFunction': DiabetesPedigreeFunction, 'Age': Age,}, ignore_index=True)
+        
         cc = sc.transform(df)
   
         with open('randomforest_old_method.pkl','rb') as file:
             rf = pickle.load(file)
 
         prediction = rf.predict(cc)
+        
         return render_template('result.html', pred=str(prediction[0]), name='name')
     
     
