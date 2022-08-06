@@ -57,7 +57,10 @@
                         Your predicted diabetes result will be:</p></div>
                     <div class="col-lg-12"><p class="lead"></div>
                         <br> {%if pred.0%}
-                        <p>{{'tetfwfewfwef'}}</p>
+                        <p>{{'Tidak ada penyakit Diabetes'}}
+                            {% else %}
+                            {{'Kemungkinan Terkena Diabetes. Silahkan Hubungi dokter untuk memastikan'}}
+                        </p>
                         {% endif %} <br></center>
                 </div>
             </div>
