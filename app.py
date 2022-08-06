@@ -30,15 +30,15 @@ def pred():
         Age = request.form["Age"]
     
         df = df.append({'Pregnancies': Pregnancies, 'Glucose': Glucose, 'BloodPressure': BloodPressure, 'SkinThickness': SkinThickness,'Insulin': Insulin, 'BMI': BMI, 'DiabetesPedigreeFunction': DiabetesPedigreeFunction, 'Age': Age}, ignore_index=True)
-        print(df)
+        
         cc = sc.transform(df)
-        print(cc)
+        
         with open('./model/randomforest_old_method.pkl','rb') as file:
             rf = pickle.load(file)
 
         prediction = rf.predict(cc)
         df['prediction'] = prediction
-        print(df['prediction'][0])
+        df.prediction = df.prediction.replace(['0','1'],['Tidak ada penyakit Diabetes','Memiliki gejala Diabetes. Silahkan Hubungi dokter untuk memastikan'])
         return render_template('result.html', pred=str(df['prediction'][0]), name='name')
     
     
