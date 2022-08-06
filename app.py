@@ -13,6 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    print('yes')
     return render_template("index.html")
 
 @app.route('/predict', methods=['GET','POST'])
