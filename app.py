@@ -38,7 +38,7 @@ def pred():
 
         prediction = rf.predict(cc)
         df['prediction'] = prediction
-        # df.prediction = df.prediction.replace(['0','1'],['Tidak ada penyakit Diabetes','Memiliki gejala Diabetes. Silahkan Hubungi dokter untuk memastikan'])
+        df['prediction'] = df['prediction'].replace(['0','1'],['Tidak ada penyakit Diabetes','Memiliki gejala Diabetes. Silahkan Hubungi dokter untuk memastikan'])
         return render_template('result.html', pred=str(df['prediction'][0]), name='name')
     
     
